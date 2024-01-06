@@ -74,3 +74,29 @@ class Pawn extends Piece{
     
     ]
 }
+
+class Knight extends Piece{
+    move_pattern = [[]]
+    move_pattern_repeatable = false
+}
+
+class Bishop extends Piece{
+    move_pattern = [[-1,-1], [-1,1], [1,-1], [1,1]]
+    move_pattern_repeatable = true
+}
+
+class Rook extends Piece{
+    move_pattern = [[-1,0], [0,-1], [0,1], [1,0]]
+    move_pattern_repeatable = true
+}
+class Queen extends Piece{
+    move_pattern = [[-1,0], [0,-1], [0,1], [1,0], [-1,-1], [-1,1], [1,-1], [1,1]]
+    move_pattern_repeatable = true
+}
+class King extends Piece{
+
+    //Add castling functionality???
+
+    move_pattern = [[-1,0], [0,-1], [0,1], [1,0], [-1,-1], [-1,1], [1,-1], [1,1]]
+    move_pattern_repeatable = false
+}

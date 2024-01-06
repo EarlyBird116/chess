@@ -21,51 +21,15 @@ body{
     width: 12.5%;
     height: 100%;
 }
-#row-1 :nth-child(odd){
+.odd-row :nth-child(odd){
     background-color: black;
 }
-#row-1 :nth-child(even){
+.odd-row :nth-child(even){
     background-color: white;
 }
-#row-2 :nth-child(odd){
+.even-row :nth-child(odd){
     background-color: white;
 }
-#row-2 :nth-child(even){
-    background-color: black;
-}
-#row-3 :nth-child(odd){
-    background-color: black;
-}
-#row-3 :nth-child(even){
-    background-color: white;
-}
-#row-4 :nth-child(odd){
-    background-color: white;
-}
-#row-4 :nth-child(even){
-    background-color: black;
-}
-#row-5 :nth-child(odd){
-    background-color: black;
-}
-#row-5 :nth-child(even){
-    background-color: white;
-}
-#row-6 :nth-child(odd){
-    background-color: white;
-}
-#row-6 :nth-child(even){
-    background-color: black;
-}
-#row-7 :nth-child(odd){
-    background-color: black;
-}
-#row-7 :nth-child(even){
-    background-color: white;
-}
-#row-8 :nth-child(odd){
-    background-color: white;
-}
-#row-8 :nth-child(even){
+.even-row :nth-child(even){
     background-color: black;
 }
