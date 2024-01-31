@@ -1,0 +1,42 @@
+1. Piece Classes
+	A. Movelist
+		I. Move Patterns
+		II. Potential moves based on current location
+		III. En Passant tracker
+		IV. Check tracker
+	B. Current Location
+	C. Last location? Where best to put this?
+	D. 
+
+2. Workflow
+	A. Initial State
+		I. Board orientation based on color
+		II. Populate with pieces
+		III. Clock times & start
+	B. Turns
+		I. Turn notification & start clock
+		II. Highlight possible moves on click
+			a. Check for:
+				i. blocking pieces
+				ii. edge of board
+				iii. en passant if applicable
+				iv. putting self in check
+			
+		III. Make move
+			a. Move piece on board
+			b. Promote piece if applicable
+			c. Check for check or Checkmate & flag 
+			d. Add 1 to turn count & Switch color variable
+	C. Clock
+			
+
+3. Move History
+	A. Track moves on side
+	B. Log last move to en passant var?
+
+4. HTML/CSS/JS
+
+5. MySQL Database of games/player ELO -> Player profile page/login functionality
+	A. Player profile
+
+6. Add stockfish?
