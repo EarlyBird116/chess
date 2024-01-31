@@ -100,3 +100,60 @@ class King extends Piece{
     move_pattern = [[-1,0], [0,-1], [0,1], [1,0], [-1,-1], [-1,1], [1,-1], [1,1]]
     move_pattern_repeatable = false
 }
+
+let possible_square = [];
+
+let x_coord = selected_piece.square[0];
+let y_coord = selected_piece.square[1];
+
+let repeatable = selected_piece.move_pattern_repeatable;
+
+
+//Logic to log which moves are allowable based on 
+for (i = 0;selected_piece.move_pattern.length;i++){
+    current_move_pattern = selected_piece.move_pattern[i]
+    let repeat_count = 1;
+    
+    //Loop to contain repeat
+    for(){
+        temp_x = x_coord + current_move_pattern[0] * repeat_count;
+        temp_y = y_coord + current_move_pattern[1] * repeat_count;
+
+        //Check for piece on square
+        temp_square = board[temp_x][temp_y];
+
+        if(temp_square){
+            if(temp_square.color === selected_piece.color){
+                return; //Not added b/c can't capture own piece
+            }
+            if(temp_square.color !== selected_piece.color){
+
+                //Stops pawns from capturing forward
+                if(selected_piece == Pawn){
+                    if (current_move_pattern[1] > 0){
+                        return;
+                        
+                    }
+                }
+
+                //Add capturable piece to possible square
+                possible_square.append([temp_x,temp_y]);
+                continue;
+            }
+
+            //Add en passant square if applicable
+            if(en_passant_square === temp_square && selected_piece == Pawn){
+                possible_square.append(temp_x, temp_y);
+            }
+        } else {
+            possible_square.append(temp_x, temp_y);
+            if(repeatable){
+                repeat_count++
+                continue;
+            } else{
+                return;
+            }
+        }
+    }
+}
+  
